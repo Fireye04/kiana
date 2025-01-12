@@ -2,8 +2,9 @@
 
 {{.Content}}
 
+{{ $url := .Site.BaseURL}}
 {{ range readDir "/static/sketches" }}
-<center><img src="/sketches/{{.Name}}"></center>
+<center><img src="{{$url}}/sketches/{{.Name}}"></center>
 {{ end }}
 
 

@@ -3,9 +3,9 @@
 {{.Content}}
 
 <!--GENERATE PORTFOLIO FEED-->
-
+{{ $url := .Site.BaseURL}}
 {{ range readDir "/static/portfolio" }}
-<center><img src="/portfolio/{{.Name}}"></center>
+<center><img src="{{$url}}/portfolio/{{.Name}}"></center>
 {{ end }}
 
 {{end}}
