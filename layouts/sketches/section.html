@@ -1,0 +1,12 @@
+{{define "main"}}
+
+{{.Content}}
+
+{{ range readDir "/static/sketches" }}
+<center><img src="/sketches/{{.Name}}"></center>
+{{ end }}
+
+
+{{end}}
+
+

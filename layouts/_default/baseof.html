@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      {{partial "header.html" .}}
+  </head>
+  <nav>
+    <ul>
+      <li {{if eq .Page.Params.params.id "portfolio"}} class="selected" {{end}} ><a href="/"><p><strong>Portfolio</strong></p></a></li>
+      <li {{if eq .Page.Params.params.id "skeches"}} class="selected" {{end}} ><a href="/sketches"><p><strong>Sketches</strong></p></a></li>
+      <li {{if eq .Page.Params.params.id "about"}} class="selected" {{end}} ><a href="/about"><p><strong>About</strong></p></a></li>
+    </ul>
+  </nav>
+  <body>
+      {{ block "main" . }}{{ end }}
+  </body>
+</html>

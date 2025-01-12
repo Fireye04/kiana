@@ -1,0 +1,11 @@
+{{define "main"}}
+
+{{.Content}}
+
+<!--GENERATE PORTFOLIO FEED-->
+
+{{ range readDir "/static/portfolio" }}
+<center><img src="/portfolio/{{.Name}}"></center>
+{{ end }}
+
+{{end}}
