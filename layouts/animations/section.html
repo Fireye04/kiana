@@ -1,0 +1,13 @@
+{{define "main"}}
+
+{{.Content}}
+
+{{ $url := .Site.BaseURL}}
+{{ range readDir "/static/animations" }}
+<center><img src="{{$url}}/animations/{{.Name}}"></center>
+{{ end }}
+
+
+{{end}}
+
+

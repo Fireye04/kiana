@@ -75,6 +75,7 @@ nav div ul {
     display: flex;
     min-width: 250px;
     justify-content: center;
+        flex-wrap:wrap;
 }
 
 nav div ul li {
@@ -91,9 +92,13 @@ nav div img {
     padding:0;
 }
 
-@media (min-width:772px) {
-nav div img {
+@media (min-width:780px) {
+    nav div img {
         padding:20px 0;
+    }
+    
+    nav div ul {
+        flex-wrap:wrap;
     }
 }
 
