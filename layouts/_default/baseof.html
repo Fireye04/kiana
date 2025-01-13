@@ -3,14 +3,21 @@
   <head>
       {{partial "header.html" .}}
   </head>
-  <nav>
-    <ul>
-      <li {{if eq .Page.Params.params.id "portfolio"}} class="selected" {{end}} ><a href="{{.Site.BaseURL}}/"><p><strong>Portfolio</strong></p></a></li>
-      <li {{if eq .Page.Params.params.id "skeches"}} class="selected" {{end}} ><a href="{{.Site.BaseURL}}/sketches"><p><strong>Sketches</strong></p></a></li>
-      <li {{if eq .Page.Params.params.id "about"}} class="selected" {{end}} ><a href="{{.Site.BaseURL}}/about"><p><strong>About</strong></p></a></li>
-    </ul>
-  </nav>
   <body>
+  <nav>
+    <div>
+        <img src="{{.Site.BaseURL}}/Assets/name.png" style"width:300px">
+    </div>
+    <div>
+    <ul>
+      <li {{if eq .Page.Params.params.id "portfolio"}}class="selected"{{end}}><a href="{{.Site.BaseURL}}"><strong>Portfolio</strong></a></li>
+      <li {{if eq .Page.Params.params.id "skeches"}} class="selected" {{end}} ><a href="{{.Site.BaseURL}}/sketches"><strong>Sketches</strong></a></li>
+      <li {{if eq .Page.Params.params.id "about"}} class="selected" {{end}} ><a href="{{.Site.BaseURL}}/about"><strong>About</strong></a></li>
+    </ul>
+    </div>
+  </nav>
+    <div class="content">
       {{ block "main" . }}{{ end }}
+    </div>
   </body>
 </html>
